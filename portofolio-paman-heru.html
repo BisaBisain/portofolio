@@ -1,0 +1,226 @@
+<!DOCTYPE html> <!-- Menentukan tipe dokumen HTML -->
+<html lang="id"> <!-- Bahasa halaman: Indonesia -->
+<head>
+  <meta charset="UTF-8"> <!-- Set karakter encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Supaya responsif di HP -->
+  <title>Portofolio Paman Heru</title> <!-- Judul tab browser -->
+  <link rel="icon" type="image/png" href="https://img.icons8.com/?size=48&id=yFi4egqICrpB&format=png" />
+  
+  <!-- Link Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+
+  <style>
+    /* Gaya untuk seluruh halaman */
+    body {
+      margin-top: 150px;
+      padding: 0;
+      display: flex; /* Menggunakan Flexbox untuk tata letak */
+      background: url('https://images.unsplash.com/photo-1598628340858-201fe3c2cb7a?...') no-repeat center center fixed; /* Background gambar */
+      background-size: cover; /* Agar gambar menyesuaikan lebar layar */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Roboto Serif', serif; /* Font isi halaman */
+    }
+
+    /* Overlay hitam transparan di atas background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Warna hitam transparan */
+      z-index: -1; /* Ditaruh di belakang konten */
+    }
+
+    /* Kartu utama tempat isi pengumuman */
+    .kertas {
+      background-color: rgba(255, 255, 255, 0.95); /* Putih transparan */
+      width: 70%;
+      max-width: 920px;
+      height: auto;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Bayangan kartu */
+      border-radius: 12px;
+      padding: 50px 40px;
+      box-sizing: border-box;
+      position: relative;
+      margin-top: 220px; 
+    }
+
+    .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    }
+
+    .gallery img {
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .lightbox img {
+      width: 100vw;
+      height: 95vh;
+      object-fit: contain;
+    }
+
+    .gallery img:hover {
+    transform: scale(1.05);
+    }
+    
+    /* Paragraf umum */
+    p {
+      text-align: left;
+      color: #333;
+      font-size: 1.05em;
+      font-weight: 400;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      margin-top: 10px;
+    }
+
+    /* Ikon insinyur di kanan atas */
+    .ikon-insinyur {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 2em;
+    }
+
+    /* Ikon amplop di kiri bawah */
+    .ikon-amplop {
+      position: absolute;
+      bottom: 20px;
+      left: 38px;
+      font-size: 1.8em;
+    }
+
+    /* RESPONSIVE: untuk layar hp dengan lebar maksimal 600px */
+    @media only screen and (max-width: 600px) {
+      body {
+        margin-top: 120px;
+        margin-bottom: 120px;
+        font-size: 14px;
+        height: auto;
+        flex-direction: column;
+      }
+
+      .kertas {
+        width: 90%;
+        padding: 30px 20px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+      }
+
+      p {
+        font-size: 1em;
+        margin-top: 8px;
+        margin-bottom: 20px;
+        text-align: justify;
+        line-height: 1.5;
+      }
+
+      .ikon-insinyur {
+        font-size: 1.4em;
+        top: 10px;
+        right: 15px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+    <!-- KARTU UTAMA -->
+    <div class="kertas">
+
+      <!-- Ikon insinyur di pojok kanan atas -->
+      <div class="ikon-insinyur">⚙️📐</div>
+
+      <!-- Judul -->
+      <h2 style="text-align: center; font-size: 30px; margin-top: 10px;"><strong>Portofolio Paman Heru 🛠️</strong></h2>
+
+      <!-- Isi -->
+      <p>
+        Pekerjaan ini mencakup proses <strong>fabrikasi skala kecil</strong> berbahan <em>baja ringan</em>, mulai dari pemotongan material, pengelasan, penggerindaan, hingga pengecatan akhir. Meski dikerjakan secara mandiri sebagai usaha kecil-kecilan, hasil yang dihasilkan tetap mengedepankan <strong>standar profesional</strong> dalam segi kekuatan, kerapian, dan estetika.
+      </p>
+      <p>
+        Saya juga merancang sendiri <em>gambar kerja (drawing)</em> sederhana berbasis kebutuhan fungsional, contohnya untuk proyek seperti <strong>kanopi halaman belakang</strong> atau struktur ringan lainnya. Setiap detail dikerjakan dengan teliti, menyesuaikan ukuran di lapangan, sehingga pelanggan tetap mendapatkan solusi yang <strong>presisi dan berkualitas</strong>, tanpa harus mengorbankan biaya besar. Pengerjaan bisa dilakukan di <strong>bengkel saya sendiri</strong> atau langsung di <strong>lokasi rumah Anda</strong>, karena saya menggunakan peralatan kerja yang bersifat <em>portable</em> dan siap dibawa ke mana saja sesuai kebutuhan.
+      </p>
+      
+      <!-- Judul acara -->
+      <p style="font-size: 30px; margin-bottom: 5px;"><strong>Kanopi Perumahan Cluster</strong></p>
+
+      <p style="font-size: 20px; margin-bottom: 5px;"><strong>Galeri:</strong></p>
+
+      <div class="gallery">
+        <a href="#lightbox1"><img src="WhatsApp Image 2025-05-04 at 15.10.09.jpeg"></a>
+        <a href="#lightbox2"><img src="WhatsApp Image 2025-05-04 at 15.10.35.jpeg"></a>
+        <a href="#lightbox3"><img src="WhatsApp Image 2025-05-04 at 15.11.16.jpeg"></a>
+        <a href="#lightbox3"><img src="WhatsApp Image 2025-05-04 at 15.11.45.jpeg"></a>
+        <a href="#lightbox3"><img src="WhatsApp Image 2025-05-04 at 15.12.04.jpeg"></a>
+        <a href="#lightbox3"><img src="WhatsApp Image 2025-05-04 at 15.12.22.jpeg"></a>
+        <a href="#lightbox3"><img src="WhatsApp Image 2025-05-04 at 15.12.50.jpeg"></a>
+        <a href="#lightbox3"><img src="WhatsApp Image 2025-05-04 at 15.13.21.jpeg"></a>
+        </div>
+
+        <div style="margin-top: 2rem; padding: 1rem; background-color: #f2f2f2; border-left: 4px solid #3f3f3f;">
+          <h3 style="margin: 0 0 0.5rem 0; color: #333;">Tertarik dengan hasil kerja saya?</h3>
+          <p style="margin: 0 0 0.5rem 0;">Langsung aja hubungi saya untuk tanya-tanya atau request proyek kecil-kecilan!</p>
+          <ul style="list-style: none; padding-left: 0;">
+            <li><strong>📞 WhatsApp:</strong> <a href="https://wa.me/6281382549009" target="_blank" style="color: #007bff;">+62 813-8254-9009</a></li>
+            <!-- <li><strong>📧 Email:</strong> <a href="mailto:namakamu@email.com" style="color: #007bff;">namakamu@email.com</a></li>
+          -->
+            <li><strong>📍 Lokasi Bengkel:</strong> Cileungsi, Bogor – Jawa Barat</li>
+          </ul>
+        </div>
+        
+      <!-- Popup Gambar Besar -->
+      <div class="lightbox" id="lightbox">
+        <img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="preview">
+      </div>
+
+    </div>
+
+<script>
+  // Buka lightbox saat gambar diklik
+  document.querySelectorAll('.gallery img').forEach(img => {
+    img.addEventListener('click', () => {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  // Klik background untuk menutup
+  document.getElementById('lightbox').addEventListener('click', () => {
+    document.getElementById('lightbox').style.display = 'none';
+  });
+</script>
+</body>
+</html>
