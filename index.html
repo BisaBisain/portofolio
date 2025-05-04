@@ -91,6 +91,16 @@
     transform: scale(1.05);
     }
     
+    p.judul-utama {
+      text-align: center;
+      font-size: 30px;
+    }
+
+    p.judul-galeri {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
     /* Paragraf umum */
     p {
       text-align: left;
@@ -119,37 +129,71 @@
     }
 
     /* RESPONSIVE: untuk layar hp dengan lebar maksimal 600px */
-    @media only screen and (max-width: 600px) {
-      body {
-        margin-top: 120px;
-        margin-bottom: 120px;
-        font-size: 14px;
-        height: auto;
-        flex-direction: column;
-      }
+@media only screen and (max-width: 600px) {
+  body {
+    margin-top: 0;
+    padding-top: 0;
+    display: block;
+    height: auto;
+    font-size: 14px;
+  }
 
-      .kertas {
-        width: 90%;
-        padding: 30px 20px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-      }
+  .kertas {
+    width: 95%;
+    padding: 30px 20px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  }
+  .gallery {
+    justify-content: center;
+    gap: 8px;
+  }
 
-      p {
-        font-size: 1em;
-        margin-top: 8px;
-        margin-bottom: 20px;
-        text-align: justify;
-        line-height: 1.5;
-      }
+  .gallery img {
+    width: 145px;
+    height: auto;
+    max-width: 100%;
+  }
 
-      .ikon-insinyur {
-        font-size: 1.4em;
-        top: 10px;
-        right: 15px;
-      }
+  .lightbox img {
+    width: 95vw;
+    height: auto;
+    max-height: 90vh;
+  }
 
+  p.judul-utama {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  p.judul-galeri {
+      font-size: 15px;
+      margin-bottom: 5px;
     }
+
+  p {
+    font-size: 0.95em;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 1.5;
+  }
+
+  .ikon-insinyur {
+    font-size: 20px;
+    top: 12px;
+    right: 15px;
+  }
+
+  .ikon-amplop {
+    font-size: 1.4em;
+    bottom: 12px;
+    left: 15px;
+  }
+}
   </style>
 </head>
 
@@ -162,7 +206,7 @@
       <div class="ikon-insinyur">⚙️📐</div>
 
       <!-- Judul -->
-      <h2 style="text-align: center; font-size: 30px; margin-top: 10px;"><strong>Portofolio Paman Heru 🛠️</strong></h2>
+      <p class="judul-utama"><strong>Portofolio Paman Heru 🛠️</strong></p>
 
       <!-- Isi -->
       <p>
@@ -173,9 +217,9 @@
       </p>
       
       <!-- Judul acara -->
-      <p style="font-size: 30px; margin-bottom: 5px;"><strong>Kanopi Perumahan Cluster</strong></p>
+      <p class="judul-utama"><strong>Kanopi Perumahan Cluster</strong></p>
 
-      <p style="font-size: 20px; margin-bottom: 5px;"><strong>Galeri:</strong></p>
+      <p class="judul-galeri"><strong>Galeri:</strong></p>
 
       <div class="gallery">
         <a href="#lightbox1"><img src="WhatsApp Image 2025-05-04 at 15.10.09.jpeg"></a>
